@@ -23,8 +23,7 @@ const saveTimeDelayed = throttle(saveTime, 1000);
 
 const saveCurrentTime = localStorage.getItem("videoplayer-current-time");
 
-video
-    .setCurrentTime(saveCurrentTime)
-    .on("timeupdate", saveTimeDelayed);
+video.setCurrentTime(saveCurrentTime);
+video.on("timeupdate", saveTimeDelayed);
 
 // test
