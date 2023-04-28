@@ -6,13 +6,13 @@ const emailEl = document.querySelector("input[name ='email']");
 const messageEl = document.querySelector("textarea[name ='message']");
 
 const data = {
-  email: '',
-  message: '',
+  email: "",
+  message: ""
 };
 
 const saveData = (event) => {
   event.preventDefault();
-   event.target.value = data[event.target.name];
+  data[event.target.name] = event.target.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(data));
 };
 
